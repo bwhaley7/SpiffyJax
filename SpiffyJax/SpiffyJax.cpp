@@ -51,6 +51,7 @@ void DrawMenu()
 	ComboQ = ComboMenu->CheckBox("Use Q", true);
 	ComboW = ComboMenu->CheckBox("Use W", true);
 	ComboE = ComboMenu->CheckBox("Use E", true);
+	AutoStun = ComboMenu->CheckBox("Auto Stun", true);
 	ComboR = ComboMenu->CheckBox("Use R", true);
 	AutoR = ComboMenu->CheckBox("Auto R when health <= x", false);
 	AutoRHealth = ComboMenu->AddInteger("HP%", 10, 100, 50);
@@ -166,6 +167,12 @@ PLUGIN_EVENT(void) OnRender()
 	{
 		GRender->DrawOutlinedCircle(GEntityList->Player()->GetPosition(), Vec4(255, 0, 183, 255), E->Range());
 	}
+}
+
+PLUGIN_EVENT(void) OnOrbwalkAfterAttack(IUnit* Source, IUnit* Target)
+{
+	if (W->IsReady() && GOrbwalking->GetOrbwalkingMode() == kModeCombo)
+		W->CastOnPlayer();
 }
 
 PLUGIN_API void OnLoad(IPluginSDK* PluginSDK)
