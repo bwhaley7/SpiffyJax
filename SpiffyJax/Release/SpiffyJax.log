@@ -1,0 +1,9 @@
+﻿  stdafx.cpp
+  PluginSDK.cpp
+  SpiffyJax.cpp
+     Creating library C:\Users\brade\OneDrive\Documents\Visual Studio 2015\Projects\SpiffyJax\Release\SpiffyJax.lib and object C:\Users\brade\OneDrive\Documents\Visual Studio 2015\Projects\SpiffyJax\Release\SpiffyJax.exp
+  Generating code
+  All 11 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  SpiffyJax.vcxproj -> C:\Users\brade\OneDrive\Documents\Visual Studio 2015\Projects\SpiffyJax\Release\SpiffyJax.dll
+  SpiffyJax.vcxproj -> C:\Users\brade\OneDrive\Documents\Visual Studio 2015\Projects\SpiffyJax\Release\SpiffyJax.pdb (Full PDB)
