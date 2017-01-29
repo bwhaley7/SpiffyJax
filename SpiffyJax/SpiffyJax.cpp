@@ -184,6 +184,7 @@ PLUGIN_API void OnLoad(IPluginSDK* PluginSDK)
 
 	GEventManager->AddEventHandler(kEventOnGameUpdate, OnGameUpdate);
 	GEventManager->AddEventHandler(kEventOnRender, OnRender);
+	GEventManager->AddEventHandler(kEventOrbwalkAfterAttack, OnOrbwalkAfterAttack);
 }
 
 // Called when plugin is unloaded
@@ -193,4 +194,5 @@ PLUGIN_API void OnUnload()
 
 	GEventManager->RemoveEventHandler(kEventOnGameUpdate, OnGameUpdate);
 	GEventManager->RemoveEventHandler(kEventOnRender, OnRender);
+	GEventManager->RemoveEventHandler(kEventOrbwalkAfterAttack, OnOrbwalkAfterAttack);
 }
